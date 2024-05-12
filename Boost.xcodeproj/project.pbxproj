@@ -12,6 +12,7 @@
 		274BA9F82BEF406C006EC4CF /* ColorRep.swift in Sources */ = {isa = PBXBuildFile; fileRef = 274BA9F72BEF406C006EC4CF /* ColorRep.swift */; };
 		274BA9FA2BEF407D006EC4CF /* RunningApplicationInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 274BA9F92BEF407D006EC4CF /* RunningApplicationInfo.swift */; };
 		27608E9E2BF04A2200163731 /* LaunchAtLogin in Frameworks */ = {isa = PBXBuildFile; productRef = 27608E9D2BF04A2200163731 /* LaunchAtLogin */; };
+		27608EA12BF04B1900163731 /* Sparkle in Frameworks */ = {isa = PBXBuildFile; productRef = 27608EA02BF04B1900163731 /* Sparkle */; };
 		277BEEE32BD60BE700F60339 /* MarkdownUI in Frameworks */ = {isa = PBXBuildFile; productRef = 277BEEE22BD60BE700F60339 /* MarkdownUI */; };
 		277BEEE62BD60CD000F60339 /* Splash in Frameworks */ = {isa = PBXBuildFile; productRef = 277BEEE52BD60CD000F60339 /* Splash */; };
 		277BEEE82BD60CD000F60339 /* SplashMarkdown in Frameworks */ = {isa = PBXBuildFile; productRef = 277BEEE72BD60CD000F60339 /* SplashMarkdown */; };
@@ -68,6 +69,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				27608EA12BF04B1900163731 /* Sparkle in Frameworks */,
 				27608E9E2BF04A2200163731 /* LaunchAtLogin in Frameworks */,
 				277BEEE82BD60CD000F60339 /* SplashMarkdown in Frameworks */,
 				277BEEE32BD60BE700F60339 /* MarkdownUI in Frameworks */,
@@ -112,9 +114,9 @@
 				277BEEED2BD620F100F60339 /* Info.plist */,
 				27BB37A52BD5B81C003ADF07 /* BoostApp.swift */,
 				27BB37B62BD5B852003ADF07 /* AppDelegate.swift */,
+				27BB37A72BD5B81C003ADF07 /* ConversationDialog.swift */,
 				27BB37BF2BD5BAC7003ADF07 /* FloatingChatController.swift */,
 				27BB37BD2BD5B9C6003ADF07 /* SettingsView.swift */,
-				27BB37A72BD5B81C003ADF07 /* ConversationDialog.swift */,
 				277BEEEE2BD6255E00F60339 /* ChatViewModel.swift */,
 				274BA9F22BEF3CB2006EC4CF /* DisplayAnalyzer.swift */,
 				27BB37BB2BD5B973003ADF07 /* Keybindings.swift */,
@@ -189,6 +191,7 @@
 				277BEEE52BD60CD000F60339 /* Splash */,
 				277BEEE72BD60CD000F60339 /* SplashMarkdown */,
 				27608E9D2BF04A2200163731 /* LaunchAtLogin */,
+				27608EA02BF04B1900163731 /* Sparkle */,
 			);
 			productName = Boost;
 			productReference = 27BB37A22BD5B81C003ADF07 /* Boost.app */;
@@ -224,6 +227,7 @@
 				277BEEE12BD60BE700F60339 /* XCRemoteSwiftPackageReference "swift-markdown-ui" */,
 				277BEEE42BD60CD000F60339 /* XCRemoteSwiftPackageReference "Splash" */,
 				27608E9C2BF04A2200163731 /* XCRemoteSwiftPackageReference "LaunchAtLogin-Modern" */,
+				27608E9F2BF04B1900163731 /* XCRemoteSwiftPackageReference "Sparkle" */,
 			);
 			productRefGroup = 27BB37A32BD5B81C003ADF07 /* Products */;
 			projectDirPath = "";
@@ -494,6 +498,14 @@
 				kind = branch;
 			};
 		};
+		27608E9F2BF04B1900163731 /* XCRemoteSwiftPackageReference "Sparkle" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/sparkle-project/Sparkle";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.6.2;
+			};
+		};
 		277BEEE12BD60BE700F60339 /* XCRemoteSwiftPackageReference "swift-markdown-ui" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/gonzalezreal/swift-markdown-ui";
@@ -533,6 +545,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 27608E9C2BF04A2200163731 /* XCRemoteSwiftPackageReference "LaunchAtLogin-Modern" */;
 			productName = LaunchAtLogin;
+		};
+		27608EA02BF04B1900163731 /* Sparkle */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 27608E9F2BF04B1900163731 /* XCRemoteSwiftPackageReference "Sparkle" */;
+			productName = Sparkle;
 		};
 		277BEEE22BD60BE700F60339 /* MarkdownUI */ = {
 			isa = XCSwiftPackageProductDependency;

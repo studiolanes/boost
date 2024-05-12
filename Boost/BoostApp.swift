@@ -35,11 +35,15 @@ struct BoostApp: App {
             
             Divider()
             
+            Button("Check for updates...") {
+                appDelegate.updaterController?.checkForUpdates(nil)
+            }
+            
             SettingsLink(label: {
                 Text("Open Settings...")
             })
-            
-            Link("Follow @studiolanes", destination: URL(string: "https://x.com/studiolanes")!)
+
+            Divider()
             
             Button("Quit Boost") {
                 exit(0)

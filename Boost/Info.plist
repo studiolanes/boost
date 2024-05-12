@@ -8,5 +8,7 @@
 	</array>
 	<key>LSUIElement</key>
 	<true/>
+	<key>SUFeedURL</key>
+	<string>https://studiolanes.com/boost/appcast.xml</string>
 </dict>
 </plist>
