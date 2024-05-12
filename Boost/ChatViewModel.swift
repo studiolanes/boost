@@ -48,24 +48,23 @@ final class ChatViewModel {
     let openAI = OpenAI(apiToken: "")
     var stream: AnyCancellable?
     var systemPrompt: ChatQuery.ChatCompletionMessageParam?
+    @AppStorage("system_prompt") var savedSystemPrompt = ""
     
     func setup(contextualContent: String?, highlighted: String?) {
         history = []
         
-        var prompt = "You are a world class agent that is great at answering my questions concisely and to the point.\n"
+        var prompt = savedSystemPrompt
         
         if let contextualContent {
-            prompt += "\(contextualContent)\nI am going to ask you questions about the above content. Be concise and straight to the point."
+            prompt += "I am going to ask you questions about the below content. \(contextualContent)\n"
             
             if let highlighted {
-                prompt += "But specifically, I am going to ask you about the following part of the content?\n\(highlighted)"
+                prompt += "But specifically, I am going to ask you about the following part of the content.\n\(highlighted)"
             }
         } else {
             if let highlighted {
-                prompt += "\(highlighted)\nI'm going to ask you questions about the above content."
+                prompt += "I'm going to ask you questions about the below content.\n\(highlighted)"
             }
-            
-            prompt += "Be concise and straight to the point when answering."
         }
         
         systemPrompt = .init(role: .system, content: prompt)

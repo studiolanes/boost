@@ -10,7 +10,7 @@ import Cocoa
 
 final class DisplayAnalyzer {
     static let redactedWindowNames = Set([
-        "Window Server", "Screenshot", "Camp macOS", "axAuditService", "Camp"
+        "Window Server", "Screenshot", "Camp macOS", "axAuditService", "Camp", "CleanShot X", "Dock",
     ])
     
     func getCurrentCursorPosition() -> CGPoint? {

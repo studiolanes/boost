@@ -55,7 +55,8 @@ final class ContextualChatModel {
         guard var res = cands.first else {
             return
         }
-        
+       
+        print(res)
         let matchingApp = NSWorkspace.shared.runningApplications.first { $0.processIdentifier == res.kCGWindowOwnerPID }
         res.bundleURL = matchingApp?.bundleURL
         app = matchingApp
